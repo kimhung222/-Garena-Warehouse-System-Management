@@ -164,10 +164,10 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#request"><i class="fa fa-fw fa-edit"></i> Yêu cầu nhập xuất kho<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="request" class="collapse">
                             <li>
-                                <a href="#">Yêu cầu nhập kho</a>
+                                <a href="importRequest.html">Yêu cầu nhập kho</a>
                             </li>
                             <li>
-                                <a href="#">Yêu cầu xuất kho</a>
+                                <a href="exportRequest.html">Yêu cầu xuất kho</a>
                             </li>
                         </ul>
                     </li>
@@ -175,36 +175,40 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#document"><i class="fa fa-fw fa-file"></i> Chứng từ<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="document" class="collapse">
                             <li>
-                                <a href="#">Chứng từ nhập kho</a>
+                                <a href="documentImport.html">Chứng từ nhập kho</a>
                             </li>
                             <li>
-                                <a href="#">Chứng từ xuất kho</a>
+                                <a href="documentExport.html">Chứng từ xuất kho</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-table"></i> Kiểm kê hàng</a>
+                        <a href="inventory.html"><i class="fa fa-fw fa-table"></i> Kiểm kê hàng</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#report"><i class="fa fa-fw fa-file"></i> Báo cáo <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="report" class="collapse">
                             <li>
-                                <a href="#">Báo cáo tồn kho</a>
+                                <a href="reportRemain.html">Báo cáo tồn kho</a>
                             </li>
                             <li>
-                                <a href="#">Báo cáo nhập xuất tồn</a>
+                                <a href="reportIER.html">Báo cáo nhập xuất tồn</a>
                             </li>
                             <li>
-                                <a href="#">Báo cáo nhập kho</a>
+                                <a href="reportImport.html">Báo cáo nhập kho</a>
                             </li>
                             <li>
-                                <a href="#">Báo cáo xuất kho</a>
+                                <a href="reportExport.html">Báo cáo xuất kho</a>
                             </li>
                             <li>
-                                <a href="#">Báo cáo hàng không đủ chất lượng</a>
+                                <a href="reportQuality.html">Báo cáo hàng không đủ chất lượng</a>
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="action.html"><i class="fa fa-fw fa-arrows-v"></i> Nhập/Xuất Kho</a>
+                    </li>
+                    <!--
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
@@ -216,6 +220,7 @@
                             </li>
                         </ul>
                     </li>
+                    -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -232,7 +237,7 @@
                             Tạo từ file Excel<input type="file">
                         </span>
                     </div>
-
+                    <form>
                     <div class ="form-group">
                         Loại yêu cầu
                         <div class="radio">
@@ -240,15 +245,25 @@
                         </div>
                         <div class="radio">
                           <label><input type="radio" name="optradio">Xuất kho</label>
-                        </div>                                    
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="col-md-3">
+                        <input type="text" name="ngkiemtra" class="form-control" placeholder="Người kiểm tra">
+                        </div>
+                    </div>
+                    <div>                                    
                     <table class="table table-striped" id="mytable">
     					<thead>
     					  <tr>
-    					    <th>STT</th>
-    					    <th>Mã hàng nhà cung cấp</th>
-    					    <th>Tên hàng</th>
-    					    <th>Số lượng trong đơn vị</th>
-    					    <th>Giá nhập</th>
+                            <th> STT</th>
+                            <th> Mã hàng nhà cung cấp</th>
+                            <th> Tên sản phẩm</th>
+                            <th> Số lượng</th>
+                            <th> Đơn vị tính</th>
+                            <th> Giá nhập</th>
+                            <th> Ghi chú</th>
     					  </tr>
     					</thead>
     					<tbody>
@@ -280,9 +295,10 @@
   					<div>
   						<button type="button" class="btn btn-success" onclick="addRow()"> Thêm cột </button>
   						<button type="button" class="btn btn-danger"  onclick="DeleteRow()"> Xóa cột </button>
-  						<button type="submit" class="btn btn-primary"> Lưu </button>
+  						<a href="Requestdetail.html" type="submit" class="btn btn-primary"> Xem trước </a>
   					</div>
                     </div>
+                    </form>
                 </div>
             </div>       	
 
