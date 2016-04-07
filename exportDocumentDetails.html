@@ -1,14 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Kiểm hàng</title>
+    <title>Bảng điều khiển chính</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -28,10 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="assets/js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -206,10 +205,6 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="action.html"><i class="fa fa-fw fa-arrows-v"></i> Nhập/Xuất Kho</a>
-                    </li>
-                    <!--
-                    <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
@@ -220,104 +215,81 @@
                             </li>
                         </ul>
                     </li>
-                    -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
+		<div class="container">
+			<div style="padding-bottom: 10px">
+			<center> <h1>Chứng từ xuất kho</h1> </center>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+			<ul style="padding-bottom: 10px" class="list-group">
+				<li class="list-group-item">
+					Ngày		 : 16/6/2016
+				</li>
+				<li class="list-group-item">
+					Nhà cung cấp : Bruce Wayne
+				</li>
+				<li class="list-group-item">
+					Xuất tại kho : 144 Xuân Thủy
+				</li>
+			</ul>
+			<div>
+			<table class="table table-bordered">
+				<thead>
+					<th> STT </th>
+					<th> Tên sản phẩm </th>
+					<th> Mã hàng </th>
+					<th> Thực chứng từ</th>
+					<th> Thực xuất </th>
+					<th> Đơn giá </th>
+					<th> Đơn vị tính </th>
+					<th> Thành tiền </th>
+				</thead>
+				<tr>
+					<th> 1 </th>
+					<th> Laptop DELL inspirion N5520 </th>
+					<th> DELN5520 </th>
+					<th> 10</th>
+					<th> 10 </th>
+					<th> 13000000</th>
+					<th> Chiếc </th>
+					<th> 130000000 </th>
+				</tr>
+				<tr>
+					<th> 2 </th>
+					<th> Laptop DELL Latitude X426E </th>
+					<th> DELN5520 </th>
+					<th> 7</th>
+					<th> 7 </th>
+					<th> 13000000</th>
+					<th> Chiếc </th>
+					<th> 91000000 </th>
 
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
-            <div class="panel panel-info">
-                <div class="panel-heading">Tạo yêu cầu</div>
-                <div class="panel-body">
-                    <div class="form-group">
-                        <span class="btn btn-default btn-file">
-                            Tạo từ file Excel<input type="file">
-                        </span>
-                    </div>
-                    <form>
-                    <div class ="form-group">
-                        Loại yêu cầu
-                        <div class="radio">
-                          <label><input type="radio" name="optradio">Nhập kho</label>
-                        </div>
-                        <div class="radio">
-                          <label><input type="radio" name="optradio">Xuất kho</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-3">
-                        <input type="text" name="ngkiemtra" class="form-control" placeholder="Người kiểm tra">
-                        </div>
-                    </div>
-                    <div>                                    
-                    <table class="table table-striped" id="mytable">
-    					<thead>
-    					  <tr>
-                            <th> STT</th>
-                            <th> Mã hàng nhà cung cấp</th>
-                            <th> Tên sản phẩm</th>
-                            <th> Số lượng đạt/ Tổng số lượng</th>
-                            <th> Đơn vị tính</th>
-                            <th> Giá nhập</th>
-                            <th> Ghi chú</th>
-    					  </tr>
-    					</thead>
-    					<tbody>
-    					<!--
-    					  <tr>
-    					    <td>1</td>
-    					    <td>LINH1</td>
-    					    <td>Máy ảnh CANON</td>
-    					    <td>3</td>
-    					    <td>7000000</td>
-    					  </tr>
-    					  <tr>
-    					    <td>1</td>
-    					    <td>LINH2</td>
-    					    <td>Máy ảnh SONY</td>
-    					    <td>3</td>
-    					    <td>8000000</td>
-    					  </tr>
-    					  <tr>
-    					    <td>1</td>
-    					    <td>LINH1</td>
-    					    <td>Máy ảnh SAMSUNG</td>
-    					    <td>5</td>
-    					    <td>7000000</td>
-    					  </tr>
-    					  -->
-    					</tbody>
-  					</table>
-  					<div>
-  						<button type="button" class="btn btn-success" onclick="addRow()"> Thêm cột </button>
-  						<button type="button" class="btn btn-danger"  onclick="DeleteRow()"> Xóa cột </button>
-  						<a href="Requestdetail.html" type="submit" class="btn btn-primary"> Xem trước </a>
-  					</div>
-                    </div>
-                    </form>
-                </div>
-            </div>       	
-
-            </div>
-        </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="assets/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/button.js"></script>
-    <!-- Morris Charts JavaScript 
-    <script src="assets/js/plugins/morris/raphael.min.js"></script>
-    <script src="assets/js/plugins/morris/morris.min.js"></script>
-    <script src="assets/js/plugins/morris/morris-data.js"></script>
-    -->
-
-</body>
-
+				</tr>
+				<tr>
+					<th> 3 </th>
+					<th> Laptop DELL inspirion N5520 </th>
+					<th> DELN5520 </th>
+					<th> 10</th>
+					<th> 10 </th>
+					<th> 13000000</th>
+					<th> Chiếc </th>
+					<th> 130000000 </th>
+				</tr>
+				<tfoot>
+					<tr>
+						<th colspan="7">Tổng cộng: </th>
+						<th> 123100000$</th>
+					</tr>
+				</tfoot>
+			</table>
+			<div>
+				<a class="btn btn-warning" href=""> Quay lại </a>
+			</div>
+			</div>
+		</div>
+		</div>
+	</body>
 </html>

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,33 +13,20 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="assets/css/sb-admin.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="assets/css/plugins/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
     <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <script src="assets/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
 
     <div id="wrapper">
 
-        <!-- Navigation -->
+         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -206,10 +194,6 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="action.html"><i class="fa fa-fw fa-arrows-v"></i> Nhập/Xuất Kho</a>
-                    </li>
-                    <!--
-                    <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
@@ -220,89 +204,129 @@
                             </li>
                         </ul>
                     </li>
-                    -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
-            <div class="panel panel-info">
-                <div class="panel-heading">Tạo yêu cầu</div>
-                <div class="panel-body">
-                    <div class="form-group">
-                        <span class="btn btn-default btn-file">
-                            Tạo từ file Excel<input type="file">
-                        </span>
-                    </div>
-                    <form>
-                    <div class ="form-group">
-                        Loại yêu cầu
-                        <div class="radio">
-                          <label><input type="radio" name="optradio">Nhập kho</label>
-                        </div>
-                        <div class="radio">
-                          <label><input type="radio" name="optradio">Xuất kho</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-3">
-                        <input type="text" name="ngkiemtra" class="form-control" placeholder="Người kiểm tra">
-                        </div>
-                    </div>
-                    <div>                                    
-                    <table class="table table-striped" id="mytable">
-    					<thead>
-    					  <tr>
-                            <th> STT</th>
-                            <th> Mã hàng nhà cung cấp</th>
-                            <th> Tên sản phẩm</th>
-                            <th> Số lượng đạt/ Tổng số lượng</th>
-                            <th> Đơn vị tính</th>
-                            <th> Giá nhập</th>
-                            <th> Ghi chú</th>
-    					  </tr>
-    					</thead>
-    					<tbody>
-    					<!--
-    					  <tr>
-    					    <td>1</td>
-    					    <td>LINH1</td>
-    					    <td>Máy ảnh CANON</td>
-    					    <td>3</td>
-    					    <td>7000000</td>
-    					  </tr>
-    					  <tr>
-    					    <td>1</td>
-    					    <td>LINH2</td>
-    					    <td>Máy ảnh SONY</td>
-    					    <td>3</td>
-    					    <td>8000000</td>
-    					  </tr>
-    					  <tr>
-    					    <td>1</td>
-    					    <td>LINH1</td>
-    					    <td>Máy ảnh SAMSUNG</td>
-    					    <td>5</td>
-    					    <td>7000000</td>
-    					  </tr>
-    					  -->
-    					</tbody>
-  					</table>
-  					<div>
-  						<button type="button" class="btn btn-success" onclick="addRow()"> Thêm cột </button>
-  						<button type="button" class="btn btn-danger"  onclick="DeleteRow()"> Xóa cột </button>
-  						<a href="Requestdetail.html" type="submit" class="btn btn-primary"> Xem trước </a>
-  					</div>
-                    </div>
-                    </form>
-                </div>
-            </div>       	
-
+<div id="page-wrapper">
+ <!-- -->
+   <div class ="container">
+   <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+      <table class="table table-bordered">
+      <tr>
+         <td class="t1">
+            <span class="dropdown">
+            <center>
+               Kho : 
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Chọn kho
+                     <span class="caret"></span>
+                  </button>
+                <ul class="dropdown-menu">
+                     <li><a href="#">Kho 1</a></li>
+                     <li><a href="#">Kho 2</a></li>
+                     <li><a href="#">Kho 3</a></li>
+                </ul>
+            </span>
+            </center>
+         </td>
+         <td class="t2">
+         <center>
+            <div class="dropdown">
+               Trạng thái :
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Còn hàng
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Còn hàng</a></li>
+                    <li><a href="#">Hết hàng</a></li>
+                </ul>
+              </div>
+            </div>   
+         </center>          
+         </td>
+         <td class="t3">
+         <center>
+            <div class="dropdown">
+               Nhà cung cấp:
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Garena
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Garena</a></li>
+                    <li><a href="#">Kho 2</a></li>
+                    <li><a href="#">Kho 3</a></li>
+                </ul>
+              </div>
+            </div>   
+         </center>          
+         </td>   
+         <td><center><a class="btn btn-primary" href="fb.com/nguyenmylinh166">Hoạt động</a></center></td>       
+      </tr>
+      </table>
+      </div>
+   </div>
+   </div>
+   <!-- -->
+   <div class = "well">
+      <div class = "container">
+         <div class ="col-md-8 col-md-offset-3">
+         <form class="form-inline" role="form">
+            <div class="form-group">
+               <label for="key">Lọc: </label>
+               <input class="form-control" type = "text" id = "key"></input>
             </div>
+            
+            <div class="form-group">   
+               <label for="value"> theo </label>
+               <select  class="form-control" id ="value">
+                  <option>Ghi chú</option>
+                  <option>Giá cả</option>
+                  <option>ID</option>
+                  <option>Loại mặt hàng</option>
+               </select>
+            </div>
+            <div class ="form-group">
+               <input type ="submit" class= "btn btn-primary" value ="Tìm kiếm"/>
+            </div>
+         </form>
+         </div>
+      </div>
+   </div>
+      <!-- -->
+
+      <!-- -->
+
+      <div class = "container">
+      <div class ="panel panel-default">
+         <table class="table table-bordered">
+         <tr>
+            <thead>
+               <th>Edit</th>
+               <th>TypeID</th>
+               <th>Catagory</th>
+               <th>itemID</th>
+               <th>Name</th>
+               <th>Description</th>
+               <th>Status</th>
+               <th>Unit</th>
+               <th>On Order</th>
+               <th>On Hold</th>
+            </thead>
+         </tr>
+            <tr>
+               <td><a href="https://facebook.com"><img src="http://ipol.cissltd.com/Framework/images/icons/edit-black.png"></a></td>
+               <td>00251</td>
+               <td>WOUND CARE</td>
+               <td>WC00251-01</td>
+               <td>Iphone5S</td>
+               <td>Hết hàng </td>
+               <td>.......</td>
+               <td>chiếc</td>
+               <td>0</td>
+               <td>0</td> 
+               </td>                                                          
+            </tr>
+          </table>
         </div>
     <!-- /#wrapper -->
 
@@ -311,12 +335,12 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/button.js"></script>
+
     <!-- Morris Charts JavaScript 
     <script src="assets/js/plugins/morris/raphael.min.js"></script>
     <script src="assets/js/plugins/morris/morris.min.js"></script>
     <script src="assets/js/plugins/morris/morris-data.js"></script>
-    -->
+    --> 
 
 </body>
 

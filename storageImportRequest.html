@@ -1,40 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Preview </title>
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="description" content="">
+    	<meta name="author" content="">
+    	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    	<!-- Bootstrap Core CSS -->
+    	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Kiểm hàng</title>
+    	<!-- Custom CSS -->
+    	<link href="assets/css/sb-admin.css" rel="stylesheet">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    	<!-- Morris Charts CSS 
+    	<link href="assets/css/plugins/morris.css" rel="stylesheet"> -->
 
-    <!-- Custom CSS -->
-    <link href="assets/css/sb-admin.css" rel="stylesheet">
+    	<!-- Custom Fonts -->
+    	<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    	<script src="assets/js/jquery.js"></script>
 
-    <!-- Morris Charts CSS -->
-    <link href="assets/css/plugins/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="assets/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
-</head>
-
-<body>
+    	<!-- Bootstrap Core JavaScript -->
+    	<script src="assets/js/bootstrap.min.js"></script>
+	</head>
+	<body>
 
     <div id="wrapper">
 
@@ -227,97 +220,86 @@
         </nav>
 
         <div id="page-wrapper">
-
-            <div class="container-fluid">
-            <div class="panel panel-info">
-                <div class="panel-heading">Tạo yêu cầu</div>
-                <div class="panel-body">
-                    <div class="form-group">
-                        <span class="btn btn-default btn-file">
-                            Tạo từ file Excel<input type="file">
-                        </span>
-                    </div>
-                    <form>
-                    <div class ="form-group">
-                        Loại yêu cầu
-                        <div class="radio">
-                          <label><input type="radio" name="optradio">Nhập kho</label>
-                        </div>
-                        <div class="radio">
-                          <label><input type="radio" name="optradio">Xuất kho</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-3">
-                        <input type="text" name="ngkiemtra" class="form-control" placeholder="Người kiểm tra">
-                        </div>
-                    </div>
-                    <div>                                    
-                    <table class="table table-striped" id="mytable">
-    					<thead>
-    					  <tr>
-                            <th> STT</th>
-                            <th> Mã hàng nhà cung cấp</th>
-                            <th> Tên sản phẩm</th>
-                            <th> Số lượng đạt/ Tổng số lượng</th>
-                            <th> Đơn vị tính</th>
-                            <th> Giá nhập</th>
-                            <th> Ghi chú</th>
-    					  </tr>
-    					</thead>
-    					<tbody>
-    					<!--
-    					  <tr>
-    					    <td>1</td>
-    					    <td>LINH1</td>
-    					    <td>Máy ảnh CANON</td>
-    					    <td>3</td>
-    					    <td>7000000</td>
-    					  </tr>
-    					  <tr>
-    					    <td>1</td>
-    					    <td>LINH2</td>
-    					    <td>Máy ảnh SONY</td>
-    					    <td>3</td>
-    					    <td>8000000</td>
-    					  </tr>
-    					  <tr>
-    					    <td>1</td>
-    					    <td>LINH1</td>
-    					    <td>Máy ảnh SAMSUNG</td>
-    					    <td>5</td>
-    					    <td>7000000</td>
-    					  </tr>
-    					  -->
-    					</tbody>
-  					</table>
-  					<div>
-  						<button type="button" class="btn btn-success" onclick="addRow()"> Thêm cột </button>
-  						<button type="button" class="btn btn-danger"  onclick="DeleteRow()"> Xóa cột </button>
-  						<a href="Requestdetail.html" type="submit" class="btn btn-primary"> Xem trước </a>
-  					</div>
-                    </div>
-                    </form>
-                </div>
-            </div>       	
-
-            </div>
-        </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="assets/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/button.js"></script>
-    <!-- Morris Charts JavaScript 
-    <script src="assets/js/plugins/morris/raphael.min.js"></script>
-    <script src="assets/js/plugins/morris/morris.min.js"></script>
-    <script src="assets/js/plugins/morris/morris-data.js"></script>
-    -->
-
-</body>
-
+	<div class="col-md-8 col-md-offset-2">
+		<div class="containter">
+			<div>
+				<center><h2> Yêu cầu nhập kho </h2></center>
+			</div>
+			<div>
+			<ul class="list-group">
+				<li class="list-group-item">
+					Mã yêu cầu : CAS103
+				</li>
+				<li class="list-group-item"> 
+					Kho         : <a href="">144 xuân Thủy</a>
+				</li>
+				<li class="list-group-item"> 
+					Người tạo   : <a href="https://www.facebook.com/profile.php?id=100006469302129&fref=ts">Vũ Mỹ Linh</a>
+				</li>
+				<li class="list-group-item"> 
+					Người kiểm tra   : <a href="https://www.facebook.com/nguyenmylinh166">Nguyễn Thị Mỹ Linh</a>
+				</li>
+				<li class="list-group-item"> 
+					Ngày yêu cầu: 16/6/2016 
+				</li>
+				<li class="list-group-item"> 
+					Khách hàng  : Cty VeTV 
+				</li>
+			</ul>
+			</div>
+			<div class="panel panel-default">
+			<table class="table table-bordered">
+				<tr>
+					<thead>
+						<th>STT</th>
+						<th> Mã hàng nhà cung cấp</th>
+						<th> Tên sản phẩm</th>
+						<th> Số lượng hàng đạt yêu cầu</th>
+						<th> Đơn vị tính</th>
+						<th> Giá nhập</th>
+						<th> Ghi chú</th>
+					</thead>
+				</tr>
+				<tr>
+					<td> 1</td>
+					<td> ELC1203</td>
+					<td> Chuột Wacom Hypex MD6</td>
+					<td> 50</td>
+					<td> Chiếc</td>
+					<td> 2300000</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td> 2</td>
+					<td> SXC1203</td>
+					<td> Bàn phím Razer SX2</td>
+					<td> 70</td>
+					<td> Chiếc</td>
+					<td> 878000</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td> 3</td>
+					<td> ELC1203</td>
+					<td> Chuột Wacom Hypex MK2</td>
+					<td> 50</td>
+					<td> Chiếc</td>
+					<td> 678000</td>
+					<td> Tặng kèm giấy ăn</td>
+				</tr>
+				<tr>
+					<td> 4</td>
+					<td> ELC1203</td>
+					<td> Chuột Wacom Hypex MasterK</td>
+					<td> 50</td>
+					<td> Chiếc</td>
+					<td> 578000</td>
+					<td> Đang khuyến mại</td>
+				</tr>
+			</table>
+			</div>
+			<div>
+				<a class= "btn btn-warning" href=""> Quay lại </a>
+			</div>
+	</body>
 </html>

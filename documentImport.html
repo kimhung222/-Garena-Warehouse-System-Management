@@ -220,11 +220,91 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
 
+        <div id="page-wrapper">
             <div class="container-fluid">
-            
-            
+            <div style="padding-bottom: 10px">
+            <center> <h2>Chứng từ nhập kho :</h2> </center>
+            </div>
+            </div>
+            <div>
+               <div class = "well">
+                  <div class = "container">
+                     <div class ="col-md-8 col-md-offset-3">
+                     <form class="form-inline" role="form">
+                        <div class="form-group">
+                           <label for="key">Lọc: </label>
+                           <input class="form-control" type = "text" id = "key"></input>
+                        </div>
+                       
+                        <div class="form-group">   
+                           <label for="value"> theo </label>
+                           <select  class="form-control" id ="value">
+                              <option>Người tạo</option>
+                              <option>Mã chứng từ</option>
+                              <option>Ngày tạo</option>
+                              <option>Mã yêu cầu</option>
+                           </select>
+                        </div>
+                        <div class ="form-group">
+                           <input type ="submit" class= "btn btn-primary" value ="Tìm kiếm"/>
+                        </div>
+                     </form>
+                    </div>
+                  </div>
+               </div>                
+            </div>
+            <div>
+            <div class="panel panel-primary">
+            <table class="table table-bordered">
+                <tr>
+                    <thead>
+                        <th> STT</th>
+                        <th> Mã chứng từ</th>
+                        <th> Mã yêu cầu</th>
+                        <th> 
+                            <select  class="form-control" id ="value">
+                              <option>Ngày tạo chứng từ</option>
+                              <option>24/12/1995</option>
+                              <option>8/10/1995</option>
+                              <option>20/12/1995</option>
+                           </select>    
+                        </th>
+                        <th> Người tạo chứng từ</th>
+                    </thead>
+                </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td> <a href="Requestdetail.html">INT1305</a> </td>
+                    <td> <a href="importDocumentDetails.html">CAS103</a> </td>
+                    <td> 16/6/2016 </td>
+                    <td> <a href="">Vũ Mỹ Linh</a></td>
+                </tr>
+                <tr>
+                    <td> 2 </td>
+                    <td> <a href="">INT1306</a> </td>
+                    <td> <a href="">YC014</a> </td>
+                    <td> 16/6/2016 </td>
+                    <td> <a href="">Lưu Quang Vui</a></td>
+                </tr>
+                <tr>
+                    <td> 3 </td>
+                    <td> <a href="">INT1307</a> </td>
+                    <td> <a href="">YC015</a> </td>
+                    <td> 16/6/2016 </td>
+                    <td> <a href="">Lưu Quang Quảng</a></td>
+                </tr>
+                <tr>
+                    <td> 4 </td>
+                    <td> <a href="">INT1308</a> </td>
+                    <td> <a href="">YC016</a> </td>
+                    <td> 16/6/2016 </td>
+                    <td> <a href="">Lưu Quang Quảng</a></td>
+                </tr>
+
+            </table>
+            </div>
+            </div>
             </div>
         </div>
     <!-- /#wrapper -->
